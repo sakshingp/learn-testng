@@ -10,8 +10,14 @@ public class AnnotationListener implements IAnnotationTransformer {
 
 	public void transform(ITestAnnotation annotation, Class testClass,
 			Constructor testConstructor, Method testMethod) {
-		System.out.println("Suite name = "  + testMethod.getParameters());
-
+//		get group
+		String arr[] = annotation.getGroups();
+		for(String grp: arr)
+			System.out.println(grp);
+//		update/set group
+		String grp[] = {"partial"};
+		annotation.setGroups(grp);
+//		
 	}
 
 }
