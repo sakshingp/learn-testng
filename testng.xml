@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Example test run">
+	<listeners>
+		<listener class-name="listeners.ExecutionListener" />
+		<listener class-name="listeners.AnnotationListener" />
+	</listeners>
+ 	<test name="Simple Test">
+    	<classes>
+      		<class name="basic.basic"/>
+    	</classes>
+  	</test>
+</suite>
