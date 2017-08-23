@@ -1,0 +1,54 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Example test run">
+	<listeners>
+		<listener class-name="listeners.ExecutionListener" />
+		<listener class-name="listeners.AnnotationListener" />
+	</listeners>
+	<groups>
+		<run>
+			<include name="partial"  />
+		</run>
+	</groups>
+ 	<test name="Simple Test">
+    	<classes>
+      		<class name="basic.groups"/>
+    	</classes>
+  	</test>
+</suite>
+
+<!-- exclude group
+<groups>
+		<run>
+			<exclude name="complete"  />
+			<include name="partial"  />
+		</run>
+	</groups>
+
+// Method groups
+
+<class name="basic.groups">
+      <methods>
+        <include name=".*partial*"/>
+        <exclude name=".*complete.*"/>
+      </methods>
+ </class>
+ 
+ // Group of groups
+ 
+ <groups>
+    <define name="functest">
+      <include name="windows"/>
+      <include name="linux"/>
+    </define>
+  
+    <define name="all">
+      <include name="functest"/>
+      <include name="checkintest"/>
+    </define>
+  
+    <runs>
+      <include name="all"/>
+    </run>
+  </groups>
+ 
+-->
